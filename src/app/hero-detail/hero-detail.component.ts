@@ -13,9 +13,9 @@ import { HeroService }  from '../hero.service';
 export class HeroDetailComponent implements OnInit {
   hero: Hero;
 
-  getHero(){
+  getHero() {
     const id = +this.route.snapshot.paramMap.get('id')//這個怎麼來
-    this.heroService.getHero(id).subscribe(data => this.hero = data)
+    this.heroService.getHero(id).subscribe(data => this.hero = data);
   }
 
   goBack(): void {
